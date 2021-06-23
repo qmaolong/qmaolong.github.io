@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Nick61ba&#39;s</title>
+  
+  <subtitle>记录本身 即已是反抗</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="qmaolong.cn/"/>
+  <updated>2021-06-23T03:36:33.539Z</updated>
+  <id>qmaolong.cn/</id>
+  
+  <author>
+    <name>邱茂龙</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>语录</title>
+    <link href="qmaolong.cn/2020/1120-%E8%AF%AD%E5%BD%95201120/"/>
+    <id>qmaolong.cn/2020/1120-语录201120/</id>
+    <published>2020-11-20T01:35:17.000Z</published>
+    <updated>2021-06-23T03:36:33.539Z</updated>
+    
+    <content type="html"><![CDATA[<p>所有的知识都应该成为一扇门，而不是摆件。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;所有的知识都应该成为一扇门，而不是摆件。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="语录" scheme="qmaolong.cn/categories/%E8%AF%AD%E5%BD%95/"/>
+    
+    
+      <category term="随想" scheme="qmaolong.cn/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+      <category term="语录" scheme="qmaolong.cn/tags/%E8%AF%AD%E5%BD%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推荐——《精进：如何成为一个很厉害的人》</title>
+    <link href="qmaolong.cn/2020/0302-%E6%8E%A8%E8%8D%90%E2%80%94%E2%80%94%E3%80%8A%E7%B2%BE%E8%BF%9B%EF%BC%9A%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA%E5%BE%88%E5%8E%89%E5%AE%B3%E7%9A%84%E4%BA%BA%E3%80%8B/"/>
+    <id>qmaolong.cn/2020/0302-推荐——《精进：如何成为一个很厉害的人》/</id>
+    <published>2020-03-02T02:04:22.000Z</published>
+    <updated>2021-06-23T03:36:33.537Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/202003/jingjin.png" alt="区块链概览"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/202003/jingjin.png&quot; alt=&quot;区块链概览&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="书籍" scheme="qmaolong.cn/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+      <category term="精进" scheme="qmaolong.cn/tags/%E7%B2%BE%E8%BF%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>区块链概览</title>
+    <link href="qmaolong.cn/2020/0224-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%A6%82%E8%A7%88/"/>
+    <id>qmaolong.cn/2020/0224-区块链概览/</id>
+    <published>2020-02-24T06:04:22.000Z</published>
+    <updated>2021-06-23T03:36:33.537Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="/images/202002/qukuailian.png" alt="区块链概览"></p><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>区块链技术是基于去中心化的对等网络，用开源软件把密码学原理、时序数据和共识机制相结合，来保障分布式数据库中各节点的连贯和持续，使信息能即时验证、可追溯，但难以篡改和无法屏蔽，从而创造了一套隐私、高效、安全的共享价值体系。</p><h4 id="起源："><a href="#起源：" class="headerlink" title="起源："></a>起源：</h4><p>2008年一个网名叫“中本聪”的人发表了一篇名为《比特币：一个点对点的电子现金系统》的论文。</p><h4 id="多个角度看待区块链："><a href="#多个角度看待区块链：" class="headerlink" title="多个角度看待区块链："></a>多个角度看待区块链：</h4><p>目前区块链已经成为一个独立的技术名词，而不是依赖于某个具体产品的附属技术。区块链这个技术名词，从不同的角度看会有不同的解释。</p><ul><li>从网络的角度看：区块链的底层网络模型提供了分布式数据存储的完美实现，比特币系统从诞生至今没有发生过一次宕机事件，这有利地证明了该网络模型的稳定和高效。</li><li>从底层技术的角度看：区块链更像是一个数据结构，用区块存储数据，把区块按照顺序链接起来组成区块链，从而达到防止数据被篡改的目的。</li><li>从密码学的角度看：区块链利用椭圆曲线数字签名算法来保证数据的完整性和真实性。</li><li>从数据存储的角度看：区块链更像是一个分布式数据库，不但数据的存储是分布式的（以共享账本为例，所有的数据可以对等地存储在所有参与数据记录的节点中，而非集中存储于中心化的机构节点中），而且数据的产生也是分布式的（账本所有的节点集体维护，而非一个单独的中心机构来维护）。</li></ul><h4 id="区块链技术栈包含了以下技术特性："><a href="#区块链技术栈包含了以下技术特性：" class="headerlink" title="区块链技术栈包含了以下技术特性："></a>区块链技术栈包含了以下技术特性：</h4><ul><li>分布式数据库：传统关系型数据库ACID原则（原子性、一致性、隔离性、持久性）-&gt;分布式BASE原则（基本上可用、 软状态、 最终一致性）</li><li>密码学特性：哈希算法、Merkle树、非对称加密算法</li><li>共识机制：PWO（工作量证明）、POS（股权证明机制）、DPOS（授权股权证明）、PBFT（拜占庭共识算法）</li><li>智能合约：智能合约本质上就是一段用某种计算编程语言编写的程序，这段程序可以运行在区块链系统提供的容器中，同时这段程序也可以在某种外在、内在条件的激活下自动运行。</li></ul><h4 id="演进过程："><a href="#演进过程：" class="headerlink" title="演进过程："></a>演进过程：</h4><ul><li>区块链1.0仅仅是一个共享账本，只能记账而没有其他功能。</li><li>区块链2.0在共享账本的基础上增加了智能合约，通过智能合约可以提供更加丰富的功能。</li><li>区块链3.0进一步升级，不但能够记录交易还能记录状态，对数据进行溯源，使区块链技术不再局限于数字货币，而是应用在更多的行业场景中。</li></ul><h4 id="3个缺点："><a href="#3个缺点：" class="headerlink" title="3个缺点："></a>3个缺点：</h4><ul><li>性能问题</li><li>数据的弹性扩展问题</li><li>易用性问题</li></ul><h4 id="4个错误认识："><a href="#4个错误认识：" class="headerlink" title="4个错误认识："></a>4个错误认识：</h4><ul><li>区块链就是数字货币</li><li>区块链将取代传统的数据库</li><li>区块链系统是否一定要挖矿</li><li>区块链只能用来记账</li></ul><h4 id="应用领域："><a href="#应用领域：" class="headerlink" title="应用领域："></a>应用领域：</h4><ul><li>金融行业</li><li>供应链</li><li>公证领域</li><li>数字版权领域</li><li>保险行业</li><li>公益慈善领域</li><li>智能制造</li><li>教育就业</li></ul><h4 id="常见技术框架："><a href="#常见技术框架：" class="headerlink" title="常见技术框架："></a>常见技术框架：</h4><ul><li>比特币</li><li>以太坊</li><li>超级账本</li><li><p>CordaCorda、BigChainDB</p><h4 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h4><blockquote><p>区块链开发实战：Hyperledger Fabric关键技术与案例分析 冯翔 机械工业出版社</p></blockquote></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;/images/202002/qukuailian.png&quot; alt=&quot;区块链概览&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;定义：&quot;&gt;&lt;a href=&quot;#定义：&quot; class=&quot;headerlink&quot; title=&quot;定义：&quot;&gt;&lt;/a&gt;定义：&lt;/h3&gt;&lt;p&gt;区块链技术
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="qmaolong.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="区块链" scheme="qmaolong.cn/tags/%E5%8C%BA%E5%9D%97%E9%93%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一种用Java截取图片并矫正的算法</title>
+    <link href="qmaolong.cn/2019/0526-%E7%94%A8JAVA%E6%88%AA%E5%8F%96%E5%9B%BE%E7%89%87%E5%B9%B6%E7%9F%AB%E6%AD%A3%E7%9A%84%E7%AE%97%E6%B3%95/"/>
+    <id>qmaolong.cn/2019/0526-用JAVA截取图片并矫正的算法/</id>
+    <published>2019-05-26T09:08:17.000Z</published>
+    <updated>2021-06-23T03:36:33.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近手头的项目遇到一个需求，要从一张图片中识别出身份证并且截取出来，生成一张与真实的身份证1:1大小的图片。开始我们找了几家第三方的解决方案，根据图片直接返回识别并还原的图片，但是效果并不理想，唯一一家识别效果好的平台，只返回图片中身份证4个角的像素坐标，所以裁剪和还原的任务就需要我们自己去解决。</p><h4 id="任务"><a href="#任务" class="headerlink" title="任务"></a>任务</h4><p>已知图片中的4个像素坐标，将身份证截取出来，拉伸还原成正常比例，如下图：<br><img src="/images/20190526/1.png" alt="任务"></p><h4 id="难题"><a href="#难题" class="headerlink" title="难题"></a>难题</h4><p>由于图片的拍摄角度各有不同，身份证的形状也是多种多样，算法需要适用从不同角度下拍摄的照片。</p><h4 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h4><p><img src="/images/20190526/2.png" alt="过程"></p><p>已知ABCD4个点的坐标分别为： (a1, a2), (b1, b2), (c1, c2), (d1, d2)</p><p>步骤一：新建一张画布，身份证的真实比例是 长度8.56cm×宽度5.4cm，所以我们新建一张856*540像素的画布：</p><figure class="highlight fsharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedImage nImg = <span class="keyword">new</span> BufferedImage(<span class="number">856</span>, <span class="number">540</span>, <span class="class"><span class="keyword">type</span>);</span></span><br></pre></td></tr></table></figure><p>步骤二：得到一张空白画布后，我们试着用二分法先填充画布中线的像素，如下图，将EF线排列到GH线上</p><p><img src="/images/20190526/3.png" alt="二分法递归"></p><p>已知ABCD四个点的坐标，我们可以得出AC线与BD线的方程式，可以得到E和F的坐标(e1,e2)，(f1,f2)：</p><figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//计算左线中点</span></span><br><span class="line">double y<span class="number">1</span> = middleY * <span class="comment">(ldy - luy)</span> / im<span class="name">g2.</span>getHeight<span class="comment">()</span> + luy;</span><br><span class="line">double x<span class="number">1</span> = <span class="comment">(y1 - luy)</span> * <span class="comment">(ldx - lux)</span> / <span class="comment">(ldy - luy)</span> + lux;</span><br><span class="line"><span class="comment">//计算右线中点</span></span><br><span class="line">double y<span class="number">2</span> = middleY * <span class="comment">(rdy - ruy)</span> / im<span class="name">g2.</span>getHeight<span class="comment">()</span> + ruy;</span><br><span class="line">double x<span class="number">2</span> = <span class="comment">(y2 - ruy)</span> * <span class="comment">(rdx - rux)</span> / <span class="comment">(rdy - ruy)</span> + rux;</span><br></pre></td></tr></table></figure><p>从左到右遍历G到H的像素，根据比例获取EF线上的像素点，填充到GH线的像素上，由于GH的长度与EF的长度不同，所以不能一个像素对应一个像素依次排列，需要根据比例来获取像素，虽然会产生一个旧的像素填充到多个新的像素上导致的微量模糊，但这也是拉伸的过程中不可避免的。</p><p>填充完GH线之后，使用递归的思想，将ABEF填充到新图，以此类推，最终每一行的像素得以填充，算法结束。</p><p>我将整个过程封装成了一个JAVA类，有需要的可以直接拷贝使用。</p><figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo;</span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"><span class="keyword">import</span> java.awt.*;</span><br><span class="line"><span class="keyword">import</span> java.awt.<span class="built_in">image</span>.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* @Author qiumaolong</span></span><br><span class="line"><span class="comment">* @Date 2019/5/22 14:38</span></span><br><span class="line"><span class="comment">**/</span></span><br><span class="line"><span class="keyword">public</span> class ImageCorrection &#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 原文件</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">String</span> originalFile;</span><br><span class="line">    BufferedImage <span class="built_in">image</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 左上角坐标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> lux ;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> luy;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 右上角坐标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> rux;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> ruy;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 左下角坐标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> ldx;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> ldy;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 右下角坐标</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> rdx;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> rdy;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 目标图片规格</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">width</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">int</span> <span class="built_in">height</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> ImageCorrection(<span class="keyword">String</span> originalFile) &#123;</span><br><span class="line">        <span class="keyword">this</span>.originalFile = originalFile;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="built_in">image</span> = ImageIO.read(<span class="keyword">new</span> File(originalFile));</span><br><span class="line">            lux = <span class="number">0</span>;</span><br><span class="line">            luy = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            rux = <span class="built_in">image</span>.getWidth();</span><br><span class="line">            ruy = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            ldx = <span class="number">0</span>;</span><br><span class="line">            ldy = <span class="built_in">image</span>.getHeight();</span><br><span class="line"></span><br><span class="line">            rdx = <span class="built_in">image</span>.getWidth();</span><br><span class="line">            rdy = <span class="built_in">image</span>.getHeight();</span><br><span class="line"></span><br><span class="line">            <span class="built_in">width</span> = <span class="built_in">image</span>.getWidth();</span><br><span class="line">            <span class="built_in">height</span> = <span class="built_in">image</span>.getHeight();</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException ioe)&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"读取图片失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setRange(<span class="keyword">double</span> lux, <span class="keyword">double</span> luy, <span class="keyword">double</span> rux, <span class="keyword">double</span> ruy, <span class="keyword">double</span> ldx, <span class="keyword">double</span> ldy, <span class="keyword">double</span> rdx, <span class="keyword">double</span> rdy)&#123;</span><br><span class="line">        <span class="keyword">this</span>.lux = lux;</span><br><span class="line">        <span class="keyword">this</span>.luy = luy;</span><br><span class="line">        <span class="keyword">this</span>.rux = rux;</span><br><span class="line">        <span class="keyword">this</span>.ruy = ruy;</span><br><span class="line">        <span class="keyword">this</span>.ldx = ldx;</span><br><span class="line">        <span class="keyword">this</span>.ldy = ldy;</span><br><span class="line">        <span class="keyword">this</span>.rdx = rdx;</span><br><span class="line">        <span class="keyword">this</span>.rdy = rdy;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> setTargetImgSize(<span class="built_in">int</span> <span class="built_in">width</span>, <span class="built_in">int</span> <span class="built_in">height</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.<span class="built_in">width</span> = <span class="built_in">width</span>;</span><br><span class="line">        <span class="keyword">this</span>.<span class="built_in">height</span> = <span class="built_in">height</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> action(<span class="keyword">String</span> fileSavePath)&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            File file = <span class="keyword">new</span> File(fileSavePath);</span><br><span class="line">            action(<span class="keyword">new</span> FileOutputStream(file));</span><br><span class="line">        &#125;<span class="keyword">catch</span> (Exception fe)&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"图片保存失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> action(OutputStream os)&#123;</span><br><span class="line">        BufferedImage nImg = <span class="keyword">new</span> BufferedImage(<span class="built_in">width</span>, <span class="built_in">height</span>, <span class="built_in">image</span>.getType());</span><br><span class="line">        fillingPixel(<span class="built_in">image</span>, nImg, <span class="number">0</span>, <span class="built_in">height</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ImageIO.write(nImg, <span class="string">"jpg"</span>, os);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"图片保存失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="built_in">splice</span>(OutputStream os) &#123;</span><br><span class="line">        <span class="comment">//截取图像</span></span><br><span class="line">        BufferedImage image1 = <span class="keyword">new</span> BufferedImage(<span class="built_in">image</span>.getWidth(), <span class="built_in">image</span>.getHeight(), <span class="built_in">image</span>.getType());</span><br><span class="line">        Graphics2D g2 = image1.<span class="built_in">createGraphics</span>();</span><br><span class="line">        image1 = g2.getDeviceConfiguration().createCompatibleImage(<span class="built_in">image</span>.getWidth(), <span class="built_in">image</span>.getHeight(), Transparency.TRANSLUCENT);</span><br><span class="line">        g2.dispose();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; image1.getWidth(); i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="built_in">int</span> j = <span class="number">0</span>; j &lt; image1.getHeight(); j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!ifWithinRange(i, j))&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                image1.setRGB(i, j, <span class="built_in">image</span>.getRGB(i, j));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            ImageIO.write(image1, <span class="string">"jpg"</span>, os);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (IOException e)&#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"图片保存失败"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将不规则img1像素填充到规则的img2中</span></span><br><span class="line"><span class="comment">     * 用二分线不断递归填充实现最终结果</span></span><br><span class="line"><span class="comment">     * @param img1</span></span><br><span class="line"><span class="comment">     * @param img2</span></span><br><span class="line"><span class="comment">     * @param minY</span></span><br><span class="line"><span class="comment">     * @param maxY</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> fillingPixel(BufferedImage img1, BufferedImage img2, <span class="built_in">int</span> minY, <span class="built_in">int</span> maxY)&#123;</span><br><span class="line">        <span class="keyword">if</span> (minY == maxY || minY == maxY - <span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">int</span> middleY = (minY + maxY) / <span class="number">2</span>;</span><br><span class="line">        <span class="comment">//计算左线中点</span></span><br><span class="line">        <span class="keyword">double</span> y1 = middleY * (ldy - luy) / img2.getHeight() + luy;</span><br><span class="line">        <span class="keyword">double</span> x1 = (y1 - luy) * (ldx - lux) / (ldy - luy) + lux;</span><br><span class="line">        <span class="comment">//计算右线中点</span></span><br><span class="line">        <span class="keyword">double</span> y2 = middleY * (rdy - ruy) / img2.getHeight() + ruy;</span><br><span class="line">        <span class="keyword">double</span> x2 = (y2 - ruy) * (rdx - rux) / (rdy - ruy) + rux;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">int</span> i=<span class="number">0</span>; i&lt; img2.getWidth(); i++)&#123;</span><br><span class="line">            <span class="built_in">int</span> x = <span class="keyword">new</span> Double(i * (x2 - x1) / img2.getWidth() + x1).intValue();</span><br><span class="line">            <span class="built_in">int</span> y = <span class="keyword">new</span> Double((x - x1) * (y2 - y1) / (x2 - x1) + y1).intValue();</span><br><span class="line">            img2.setRGB(i, middleY, img1.getRGB(x, y));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        fillingPixel(img1, img2, minY, middleY);</span><br><span class="line">        fillingPixel(img1, img2, middleY, maxY);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">boolean</span> ifWithinRange(<span class="built_in">int</span> x, <span class="built_in">int</span> y)&#123;</span><br><span class="line">        <span class="keyword">double</span> n = <span class="number">0.0</span>;</span><br><span class="line">        <span class="comment">//是否在左线右边</span></span><br><span class="line">        n = (y - ldy)*(lux -ldx)/(luy - ldy) + ldx;</span><br><span class="line">        <span class="keyword">if</span> (x &lt; n)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//是否在右线左边</span></span><br><span class="line">        n = (y - ruy) * (rdx - rux) / (rdy - ruy) + rux;</span><br><span class="line">        <span class="keyword">if</span> (x &gt; n)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//是否在上线下边</span></span><br><span class="line">        n = luy + (ruy - luy)/(rux - lux)*(x - lux);</span><br><span class="line">        <span class="keyword">if</span> (y &lt; n)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//是否在下线上边</span></span><br><span class="line">        <span class="keyword">if</span> (y &gt; ldy + ((rdy - ldy) / (rdx - ldx) * (x - ldx)))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;最近手头的项目遇到一个需求，要从一张图片中识别出身份证并且截取出来，生成一张与真实的身份证1:1大小的图片。开始我们找了几家第三方的解决方案，根据图片直接返回识别并还原的图片，但是效果并不理想，唯一一家识别效果好的平台，只返回图片中身份证4个角的像素坐标，所以裁剪和还原的任
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="qmaolong.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="算法" scheme="qmaolong.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="JAVA" scheme="qmaolong.cn/tags/JAVA/"/>
+    
+      <category term="图像处理" scheme="qmaolong.cn/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《调音师》——只有兔子的故事是捏造的吗？</title>
+    <link href="qmaolong.cn/2019/0523-%E3%80%8A%E8%B0%83%E9%9F%B3%E5%B8%88%E3%80%8B-%E5%8F%AA%E6%9C%89%E5%85%94%E5%AD%90%E7%9A%84%E6%95%85%E4%BA%8B%E6%98%AF%E6%8D%8F%E9%80%A0%E7%9A%84%E5%90%97%EF%BC%9F/"/>
+    <id>qmaolong.cn/2019/0523-《调音师》-只有兔子的故事是捏造的吗？/</id>
+    <published>2019-05-23T10:03:55.000Z</published>
+    <updated>2021-06-23T03:36:33.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>中国观众对于印度电影的接受程度，大部分限于励志类型的电影，它们大多数都是反映社会现状并且不断为之反抗并且获得胜利的故事，《三个傻瓜》战胜了体制化的教育，《摔跤吧爸爸》实现了被限制的女性个人价值，《厕所英雄》解放了被压抑的女性膀胱。《调音师》区别于一贯的中国观众对于印度电影的认知，作为一部悬疑剧情片打入中国观众的视线并且获得了很高的评价。</p><p>故事改编自法国的短片，讲述了男主是一名钢琴师，为了提高对于艺术的注意力和获得特殊的社会待遇假装成盲是人，意外结识了酒馆女后进到酒馆女父亲的酒馆弹琴，由于专业的音乐水准x，钢琴师不仅获得了酒馆女的放心，也引起了酒馆客人过气老影星的注意。 老影星邀请钢琴师在第二天与妻子的结婚纪念日上门为妻子演奏钢琴，钢琴师欣然前往却不料以盲人的身份目睹了老影星的被杀现场，惊慌的钢琴师为保自身的安全只好继续装作盲人。期间，钢琴师用及其冷静的头脑和精湛的演技躲过一次次的危机，也最终没有躲过毒手成了真正的盲人。</p><p>影片的一开始，就展现了一段菜农打兔子的故事，与故事最后首尾呼应，意味深长。</p><p>钢琴师最终在法国遇到酒馆女，在陈述完整个故事离开时打飞的易拉罐让人不难猜到，钢琴师说谎了，他当时并不是一个瞎子，结尾兔子意外出现救钢琴师一命的故事极有可能是假的，钢琴师应该最终与医生共同卖掉了西米的肝脏，并以此获利治好了自己的眼睛，故事也因为这个设定变得暗黑。</p><p>但是我们不妨进一步开脑洞，我们知道整个故事都是钢琴师对酒馆女的口述，既然结尾是假的，我们有理由去怀疑这整个故事都存在钢琴师的捏造。</p><p>钢琴师为了解释与酒馆女发生的种种误解，捏造了整个故事，同时我们有理由相信，只有酒馆女经历的情节和一些客观已发生的事情是真的，比如电视新闻里对于凶案的报道。钢琴师的所有谎言都需要围绕这些客观事实展开。</p><p>让我们先捋一下真实发生的情节有哪些：</p><p>1、酒馆女骑车不慎撞倒钢琴师从而认识了钢琴师；</p><p>2、钢琴师去酒馆女父亲的酒馆打工，从而结识了过气老影星；</p><p>3、钢琴师收了老影星的纸条，酒馆女问起，钢琴师说这是个秘密；</p><p>4、电视新闻播送老影星被杀的消息；</p><p>5、酒馆女与钢琴师相恋，在某段时间开始，遭遇钢琴师的古怪变化；</p><p>6、酒馆女接到钢琴师电话赶到钢琴师住处，却从在场的老影星妻子口中得知了二人的私情；</p><p>7、酒馆女从电视上得知老演员妻子与钢琴师一同失踪的消息，认为二人私奔了；</p><p>8、酒馆女与钢琴师在巴黎偶遇并口述了整个故事。</p><p>我们暂且抛开钢琴师口述的内容，从以上的客观事件出发试着把故事串起来。</p><p>钢琴师受老明星邀请前往西米住处表演弹琴，期间钢琴师与西米发生了不正当关系，这个时候谎称去外地却突然回家想给妻子惊喜的老明星正好撞破了二人的奸情，愤怒的老明星想用枪杀掉钢琴师却遭到了钢琴师的反杀（PS：印度持枪是合法的，所以即使没有警察逻辑也是通的）。钢琴师处理掉了老明星的尸体，同时卷走了1000万。在老明星的追悼仪式上，邻居太太企图将所知的实情告诉在场的警察，钢琴师得知后迅速下手杀害了邻居太太，而那个警察很有可能在收到线索后企图追查案件，最终也被钢琴师设计死在了电梯里。医生一家极有可能是钢琴师为了圆谎而编造出来的情节，最终在逃亡的途中二人发生矛盾钢琴师杀害了西米，焚烧了车辆毁掉尸体，然后逃到了法国。</p><p>所以，钢琴师从没瞎过，从钢琴师打飞易拉罐开始，故事就有了无限的可能性，这也是这部电影的成功之处。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;中国观众对于印度电影的接受程度，大部分限于励志类型的电影，它们大多数都是反映社会现状并且不断为之反抗并且获得胜利的故事，《三个傻瓜》战胜了体制化的教育，《摔跤吧爸爸》实现了被限制的女性个人价值，《厕所英雄》解放了被压抑的女性膀胱。《调音师》区别于一贯的中国观众对于印度电影的
+      
+    
+    </summary>
+    
+      <category term="书影音" scheme="qmaolong.cn/categories/%E4%B9%A6%E5%BD%B1%E9%9F%B3/"/>
+    
+    
+      <category term="调音师" scheme="qmaolong.cn/tags/%E8%B0%83%E9%9F%B3%E5%B8%88/"/>
+    
+      <category term="影评" scheme="qmaolong.cn/tags/%E5%BD%B1%E8%AF%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一件小事</title>
+    <link href="qmaolong.cn/2019/0509-%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/"/>
+    <id>qmaolong.cn/2019/0509-一件小事/</id>
+    <published>2019-05-09T01:57:01.000Z</published>
+    <updated>2021-06-23T03:36:33.536Z</updated>
+    
+    <content type="html"><![CDATA[<p>下雨天的早晨是全人类公认最好睡的时间，我就是这个时候被手机来电吵醒的，当时六点半不到。</p><p>是要求挪车的电话，我才想起昨天回到小区由于所有车位已满，只能停在通道靠边的地方，不出意外的话只会影响一辆车的出库而不影响其他车辆的通行。</p><p>我匆忙爬起，穿上衣服拖鞋就飞奔而下，当时外面下着大雨，然而为省时间并没有打伞。</p><p>跑到车边的时候摸摸裤兜才发现，车钥匙忘带了，是的，脑残的境遇总是似曾相识。</p><p>怎么办？只能又跑一趟回去取车钥匙。</p><p>回来挪车的时候才注意到，车旁边一直停着一辆货车，这辆货车不挪走的话我的车根本没法挪出去，尴尬的地方在于，要是这辆货车挪开，通道瞬间就开了，我的车也没有挪开的必要了。而要是第一趟跑下来可以稍加判断一下局势，只需要让货车后退十米就能免去我多跑一趟的麻烦，也能减少后面车辆的拥堵时间，因为一时心急导致不理智的判断，从而引发一系列的错误决策。</p><p>记录这件小事的目的在于，它提醒了我，人在很多时候会无意中受到情绪的影响而处于短暂失智的状态。</p><p>因为心急而忘带车钥匙，因为忘带钥匙对自己的懊恼情绪导致没能判断当时的局势，没有做出灵活的变通，只能一以贯之的去完成一开始就发出的指令——挪车，不曾想到其实不挪反而能更快地解决问题。</p><p>同时也折射出自己的应变能力有多差，总是按部就班地去完成大脑发出的指令。</p><p>孔子说：君子不器。大体意思是说，君子不要成为一种器具，只会完成既定的功能，不拘泥于一种形式，而应该从事物本身出发。</p><p>挪车是为了让后面的车可以通行，而这个时候如果只是机械地去完成挪车的指令，难免会忽略了实际的情况。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;下雨天的早晨是全人类公认最好睡的时间，我就是这个时候被手机来电吵醒的，当时六点半不到。&lt;/p&gt;
+&lt;p&gt;是要求挪车的电话，我才想起昨天回到小区由于所有车位已满，只能停在通道靠边的地方，不出意外的话只会影响一辆车的出库而不影响其他车辆的通行。&lt;/p&gt;
+&lt;p&gt;我匆忙爬起，穿上衣服
+      
+    
+    </summary>
+    
+      <category term="杂文" scheme="qmaolong.cn/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>社戏（抄书）</title>
+    <link href="qmaolong.cn/2019/0424-%E7%A4%BE%E6%88%8F/"/>
+    <id>qmaolong.cn/2019/0424-社戏/</id>
+    <published>2019-04-24T08:33:34.000Z</published>
+    <updated>2021-06-23T03:36:33.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>我们鲁镇的习惯，本来是凡有出嫁的女儿，倘自己还未当家，夏间便大抵回到母家去消夏。那时我的祖母虽然还康建，但母亲也已分担了些家务，所以夏期便不能多日的归省了，只得在扫墓完毕之后，抽空去住几天，这时我便每年跟了我的母亲住在外祖母的家里。那地方叫平桥村，是一个离海边不远，极偏僻的，临河的小村庄；住户不满三十家，都种田，打鱼，只有一家很小的杂货店。但在我是乐土：因为我在这里不但得到优待，又可以免念“秩秩斯干幽幽南山”了。</p><p>和我一同玩的是许多小朋友，因为有了远客，他们也都从父母那里得了减少工作的许可，伴我来游戏。在小村里，一家的客，几乎也就是公共的。我们年纪都相仿，但论起行辈来，却至少是叔子，有几个还是太公，因为他们合村都同姓，是本家。然而我们是朋友，即使偶而吵闹起来，打了太公，一村的老老少少，也决没有一个会想出犯上这两个字来，而他们也百分之九十九不识字。</p><p>我们每天的事情大概是掘蚯蚓，掘来穿在铜丝做的小钩上，伏在河沿上去钓虾。虾是水世界里的呆子，决不惮用了自己的两个钳捧着钩尖送到嘴里去的，所以不半天便可以钓到一大碗。这虾照例是归我吃的。其次便是一同去放牛，但或者因为高等动物了的缘故罢，黄牛水牛都欺生，敢于欺侮我，因此我也总不敢走近身，只好远远地跟着，站着。这时候，小朋友们便不再原谅我会读秩秩斯干，却全都嘲笑起来了。</p><p>至于我在那里所第一盼望的，却在到赵庄去看戏。赵庄是离平桥村五里的较大的村庄；平桥村太小，自己演不起戏，每年总付给赵庄多少钱，算作合做的。当时我并不想到他们为什么年年要演戏。现在想，那或者是春赛，是社戏⑹了。</p><p>就在我十一二岁时候的这一年，这日期也看看等到了。不料这一年真可惜，在早上就叫不到船。平桥村只有一只早出晚归的航船是大船，决没有留用的道理。其余的都是小船，不合用；央人到邻村去问，也没有，早都给别人定下了。外祖母很气恼，怪家里的人不早定，絮叨起来。母亲便宽慰伊，说我们鲁镇的戏比小村里的好得多，一年看几回，今天就算了。只有我急得要哭，母亲却竭力的嘱咐我，说万不能装模装样，怕又招外祖母生气，又不准和别人一同去，说是怕外祖母要担心。</p><p>总之，是完了。到下午，我的朋友都去了，戏已经开场了，我似乎听到锣鼓的声音，而且知道他们在戏台下买豆浆喝。</p><p>这一天我不钓虾，东西也少吃。母亲很为难，没有法子想。到晚饭时候，外祖母也终于觉察了，并且说我应当不高兴，他们太怠慢，是待客的礼数里从来没有的。吃饭之后，看过戏的少年们也都聚拢来了，高高兴兴的来讲戏。只有我不开口；他们都叹息而且表同情。忽然间，一个最聪明的双喜大悟似的提议了，他说，大船？八叔的航船不是回来了么？十几个别的少年也大悟，立刻撺掇起来，说可以坐了这航船和我一同去。我高兴了。然而外祖母又怕都是孩子，不可靠；母亲又说是若叫大人一同去，他们白天全有工作，要他熬夜，是不合情理的。在这迟疑之中，双喜可又看出底细来了，便又大声的说道，我写包票！船又大；迅哥儿向来不乱跑；我们又都是识水性的！</p><p>诚然！这十多个少年，委实没有一个不会凫水的，而且两三个还是弄潮的好手。</p><p>外祖母和母亲也相信，便不再驳回，都微笑了。我们立刻一哄的出了门。</p><p>我的很重的心忽而轻松了，身体也似乎舒展到说不出的大。一出门，便望见月下的平桥内泊着一只白篷的航船，大家跳下船，双喜拔前篙，阿发拔后篙，年幼的都陪我坐在舱中，较大的聚在船尾。母亲送出来吩咐要小心的时候，我们已经点开船，在桥石上一磕，退后几尺，即又上前出了桥。于是架起两支橹，一支两人，一里一换，有说笑的，有嚷的，夹着潺潺的船头激水的声音，在左右都是碧绿的豆麦田地的河流中，飞一般径向赵庄前进了。</p><p>两岸的豆麦和河底的水草所发散出来的清香，夹杂在水气中扑面的吹来；月色便朦胧在这水气里。淡黑的起伏的连山，仿佛是踊跃的铁的兽脊似的，都远远的向船尾跑去了，但我却还以为船慢。他们换了四回手，渐望见依稀的赵庄，而且似乎听到歌吹了，还有几点火，料想便是戏台，但或者也许是渔火。</p><p>那声音大概是横笛，宛转，悠扬，使我的心也沉静，然而又自失起来，觉得要和他弥散在含着豆麦蕴藻之香的夜气里。</p><p>那火接近了，果然是渔火；我才记得先前望见的也不是赵庄。那是正对船头的一丛松柏林，我去年也曾经去游玩过，还看见破的石马倒在地下，一个石羊蹲在草里呢。过了那林，船便弯进了叉港，于是赵庄便真在眼前了。</p><p>最惹眼的是屹立在庄外临河的空地上的一座戏台，模胡在远处的月夜中，和空间几乎分不出界限，我疑心画上见过的仙境，就在这里出现了。这时船走得更快，不多时，在台上显出人物来，红红绿绿的动，近台的河里一望乌黑的是看戏的人家的船篷。</p><p>近台没有什么空了，我们远远的看罢。阿发说。</p><p>这时船慢了，不久就到，果然近不得台旁，大家只能下了篙，比那正对戏台的神棚还要远。其实我们这白篷的航船，本也不愿意和乌篷的船在一处，而况没有空地呢……</p><p>在停船的匆忙中，看见台上有一个黑的长胡子的背上插着四张旗，捏着长枪，和一群赤膊的人正打仗。双喜说，那就是有名的铁头老生，能连翻八十四个筋斗，他日里亲自数过的。</p><p>我们便都挤在船头上看打仗，但那铁头老生却又并不翻筋斗，只有几个赤膊的人翻，翻了一阵，都进去了，接着走出一个小旦来，咿咿呀呀的唱。双喜说，晚上看客少，铁头老生也懈了，谁肯显本领给白地看呢？我相信这话对，因为其时台下已经不很有人，乡下人为了明天的工作，熬不得夜，早都睡觉去了，疏疏朗朗的站着的不过是几十个本村和邻村的闲汉。乌篷船里的那些土财主的家眷固然在，然而他们也不在乎看戏，多半是专到戏台下来吃糕饼水果和瓜子的。所以简直可以算白地。</p><p>然而我的意思却也并不在乎看翻筋斗。我最愿意看的是一个人蒙了白布，两手在头上捧着一支棒似的蛇头的蛇精，其次是套了黄布衣跳老虎。但是等了许多时都不见，小旦虽然进去了，立刻又出来了一个很老的小生。我有些疲倦了，托桂生买豆浆去。他去了一刻，回来说，没有。卖豆浆的聋子也回去了。日里倒有，我还喝了两碗呢。现在去舀一瓢水来给你喝罢。</p><p>我不喝水，支撑着仍然看，也说不出见了些什么，只觉得戏子的脸都渐渐的有些稀奇了，那五官渐不明显，似乎融成一片的再没有什么高低。年纪小的几个多打呵欠了，大的也各管自己谈话。忽而一个红衫的小丑被绑在台柱子上，给一个花白胡子的用马鞭打起来了，大家才又振作精神的笑着看。在这一夜里，我以为这实在要算是最好的一折。</p><p>然而老旦终于出台了。老旦本来是我所最怕的东西，尤其是怕他坐下了唱。这时候，看见大家也都很扫兴，才知道他们的意见是和我一致的。那老旦当初还只是踱来踱去的唱，后来竟在中间的一把交椅上坐下了。我很担心；双喜他们却就破口喃喃的骂。我忍耐的等着，许多工夫，只见那老旦将手一抬，我以为就要站起来了，不料他却又慢慢的放下在原地方，仍旧唱。全船里几个人不住的吁气，其余的也打起哈欠来。双喜终于熬不住了，说道，怕他会唱到天明还不完，还是我们走的好罢。大家立刻都赞成，和开船时候一样踊跃，三四人径奔船尾，拔了篙，点退几丈，回转船头，驾起橹，骂着老旦，又向那松柏林前进了。</p><p>月还没有落，仿佛看戏也并不很久似的，而一离赵庄，月光又显得格外的皎洁。回望戏台在灯火光中，却又如初来未到时候一般，又漂渺得像一座仙山楼阁，满被红霞罩着了。吹到耳边来的又是横笛，很悠扬；我疑心老旦已经进去了，但也不好意思说再回去看。</p><p>不多久，松柏林早在船后了，船行也并不慢，但周围的黑暗只是浓，可知已经到了深夜。他们一面议论着戏子，或骂，或笑，一面加紧的摇船。这一次船头的激水声更其响亮了，那航船，就像一条大白鱼背着一群孩子在浪花里蹿，连夜渔的几个老渔父，也停了艇子看着喝采起来。</p><p>离平桥村还有一里模样，船行却慢了，摇船的都说很疲乏，因为太用力，而且许久没有东西吃。这回想出来的是桂生，说是罗汉豆⑺正旺相，柴火又现成，我们可以偷一点来煮吃。大家都赞成，立刻近岸停了船；岸上的田里，乌油油的都是结实的罗汉豆。</p><p>阿阿，阿发，这边是你家的，这边是老六一家的，我们偷那一边的呢？双喜先跳下去了，在岸上说。</p><p>我们也都跳上岸。阿发一面跳，一面说道，且慢，让我来看一看罢，他于是往来的摸了一回，直起身来说道，偷我们的罢，我们的大得多呢。一声答应，大家便散开在阿发家的豆田里，各摘了一大捧，抛入船舱中。双喜以为再多偷，倘给阿发的娘知道是要哭骂的，于是各人便到六一公公的田里又各偷了一大捧。</p><p>我们中间几个年长的仍然慢慢的摇着船，几个到后舱去生火，年幼的和我都剥豆。不久豆熟了，便任凭航船浮在水面上，都围起来用手撮着吃。吃完豆，又开船，一面洗器具，豆荚豆壳全抛在河水里，什么痕迹也没有了。双喜所虑的是用了八公公船上的盐和柴，这老头子很细心，一定要知道，会骂的。然而大家议论之后，归结是不怕。他如果骂，我们便要他归还去年在岸边拾去的一枝枯桕树，而且当面叫他八癞子。</p><p>都回来了！那里会错。我原说过写包票的！双喜在船头上忽而大声的说。</p><p>我向船头一望，前面已经是平桥。桥脚上站着一个人，却是我的母亲，双喜便是对伊说着话。我走出前舱去，船也就进了平桥了，停了船，我们纷纷都上岸。母亲颇有些生气，说是过了三更了，怎么回来得这样迟，但也就高兴了，笑着邀大家去吃炒米。</p><p>大家都说已经吃了点心，又渴睡，不如及早睡的好，各自回去了。</p><p>第二天，我向午才起来，并没有听到什么关系八公公盐柴事件的纠葛，下午仍然去钓虾。</p><p>双喜，你们这班小鬼，昨天偷了我的豆了罢？又不肯好好的摘，蹋坏了不少。我抬头看时，是六一公公棹着小船，卖了豆回来了，船肚里还有剩下的一堆豆。</p><p>是的。我们请客。我们当初还不要你的呢。你看，你把我的虾吓跑了！双喜说。</p><p>六一公公看见我，便停了楫，笑道，请客？–这是应该的。于是对我说，迅哥儿，昨天的戏可好么？</p><p>我点一点头，说道，好。</p><p>豆可中吃呢？</p><p>我又点一点头，说道，很好。</p><p>不料六一公公竟非常感激起来，将大拇指一翘，得意的说道，这真是大市镇里出来的读过书的人才识货！我的豆种是粒粒挑选过的，乡下人不识好歹，还说我的豆比不上别人的呢。我今天也要送些给我们的姑奶奶尝尝去……他于是打着楫子过去了。</p><p>待到母亲叫我回去吃晚饭的时候，桌上便有一大碗煮熟了的罗汉豆，就是六一公公送给母亲和我吃的。听说他还对母亲极口夸奖我，说小小年纪便有见识，将来一定要中状元。姑奶奶，你的福气是可以写包票的了。但我吃了豆，却并没有昨夜的豆那么好。</p><p>真的，一直到现在，我实在再没有吃到那夜似的好豆，——也不再看到那夜似的好戏了。</p><p>一九二二年十月。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我们鲁镇的习惯，本来是凡有出嫁的女儿，倘自己还未当家，夏间便大抵回到母家去消夏。那时我的祖母虽然还康建，但母亲也已分担了些家务，所以夏期便不能多日的归省了，只得在扫墓完毕之后，抽空去住几天，这时我便每年跟了我的母亲住在外祖母的家里。那地方叫平桥村，是一个离海边不远，极偏僻的
+      
+    
+    </summary>
+    
+      <category term="抄书" scheme="qmaolong.cn/categories/%E6%8A%84%E4%B9%A6/"/>
+    
+    
+      <category term="鲁迅" scheme="qmaolong.cn/tags/%E9%B2%81%E8%BF%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>祝福（抄书）</title>
+    <link href="qmaolong.cn/2019/0424-%E7%A5%9D%E7%A6%8F/"/>
+    <id>qmaolong.cn/2019/0424-祝福/</id>
+    <published>2019-04-24T06:39:39.000Z</published>
+    <updated>2021-06-23T03:36:33.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>旧历的年底毕竟最像年底，村镇上不必说，就在天空中也显出将到新年的气象来。灰白色的沉重的晚云中间时时发出闪光，接着一声钝响，是送灶的爆竹；近处燃放的可就更强烈了，震耳的大音还没有息，空气里已经散满了幽微的火药香。我是正在这一夜回到我的故乡鲁镇的。虽说故乡，然而已没有家，所以只得暂寓在鲁四老爷的宅子里。他是我的本家，比我长一辈，应该称之曰“四叔”，是一个讲理学的老监生。他比先前并没有什么大改变，单是老了些，但也还未留胡子，一见面是寒暄，寒暄之后说我“胖了”，说我“胖了”之后即大骂其新党。但我知道，这并非借题在骂我：因为他所骂的还是康有为。但是，谈话是总不投机的了，于是不多久，我便一个人剩在书房里。</p><p>第二天我起得很迟，午饭之后，出去看了几个本家和朋友；第三天也照样。他们也都没有什么大改变，单是老了些；家中却一律忙，都在准备着“祝福”。这是鲁镇年终的大典，致敬尽礼，迎接福神，拜求来年一年中的好运气的。杀鸡，宰鹅，买猪肉，用心细细的洗，女人的臂膊都在水里浸得通红，有的还带着绞丝银镯子。煮熟之后，横七竖八的插些筷子在这类东西上，可就称为“福礼”了，五更天陈列起来，并且点上香烛，恭请福神们来享用，拜的却只限于男人，拜完自然仍然是放爆竹。年年如此，家家如此，——只要买得起福礼和爆竹之类的，——今年自然也如此。天色愈阴暗了，下午竟下起雪来，雪花大的有梅花那么大，满天飞舞，夹着烟霭和忙碌的气色，将鲁镇乱成一团糟。我回到四叔的书房里时，瓦楞上已经雪白，房里也映得较光明，极分明的显出壁上挂着的朱拓的大“寿”字，陈抟老祖写的，一边的对联已经脱落，松松的卷了放在长桌上，一边的还在，道是“事理通达心气和平”。我又无聊赖的到窗下的案头去一翻，只见一堆似乎未必完全的《康熙字典》，一部《近思录集注》和一部《四书衬》。无论如何，我明天决计要走了。</p><p>况且，一想到昨天遇见祥林嫂的事，也就使我不能安住。那是下午，我到镇的东头访过一个朋友，走出来，就在河边遇见她；而且见她瞪着的眼睛的视线，就知道明明是向我走来的。我这回在鲁镇所见的人们中，改变之大，可以说无过于她的了：之前的花白的头发，即今已经全白，全不像四十上下的人；脸上瘦削不堪，黄中带黑，而且消尽了先前悲哀的神色，仿佛是木刻似的；只有那眼珠间或一轮，还可以表示她是一个活物。她一手提着竹篮。内中一个破碗，空的；一手拄着一支比她更长的竹竿，下端开了裂：她分明已经纯乎是一个乞丐了。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;旧历的年底毕竟最像年底，村镇上不必说，就在天空中也显出将到新年的气象来。灰白色的沉重的晚云中间时时发出闪光，接着一声钝响，是送灶的爆竹；近处燃放的可就更强烈了，震耳的大音还没有息，空气里已经散满了幽微的火药香。我是正在这一夜回到我的故乡鲁镇的。虽说故乡，然而已没有家，所以只
+      
+    
+    </summary>
+    
+      <category term="抄书" scheme="qmaolong.cn/categories/%E6%8A%84%E4%B9%A6/"/>
+    
+    
+      <category term="鲁迅" scheme="qmaolong.cn/tags/%E9%B2%81%E8%BF%85/"/>
+    
+  </entry>
+  
+</feed>
