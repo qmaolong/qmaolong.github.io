@@ -3,7 +3,7 @@ name: Hugo
 on:
   push:
     branches:
-      - master  # 當master分支有push操作時
+      - master  # 當master分支有push操作時s
 
 jobs:
   deploy:
