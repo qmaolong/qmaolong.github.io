@@ -1,6 +1,6 @@
 baseURL = 'https://qmaolong.cn/'
 languageCode = 'cn-zh'
-title = 'Maolong Blogs'
+title = 'Maolong's Blog'
 disqusShortname = ""
 googleAnalytics = ""
 preserveTaxonomyNames = true
