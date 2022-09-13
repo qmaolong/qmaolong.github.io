@@ -85,6 +85,10 @@ home = ["HTML", "RSS", "Algolia"]
   #xing          = "https://www.xing.com/profile/yourxingid"
   #git           = "full profile url for git user"
   
+  
+  [[params.friend_link]]
+  title = "赵化冰的博客"
+  href =  "https://www.zhaohuabing.com/"
   [[params.friend_link]]
   title = "Linda的博客"
   href =  "https://zhaozhihan.com"
@@ -103,7 +107,7 @@ home = ["HTML", "RSS", "Algolia"]
   href = "https://unsplash.com"
   
   [[params.addtional_menus]]
-  title =  "分类"
+  title =  "归档"
   href =  "/archive/"
   #[[params.addtional_menus]]
   #title =  "NOTES"
