@@ -3,7 +3,7 @@ name: Hugo
 on:
   push:
     branches:
-      - master  # 當master分支有push操作時s
+      - master  # 當master分支有push操作時
 
 jobs:
   deploy:
@@ -21,7 +21,7 @@ jobs:
           extended: true  # 如果是使用extended版本的務必取消註解。
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify -t cleanwhite
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
