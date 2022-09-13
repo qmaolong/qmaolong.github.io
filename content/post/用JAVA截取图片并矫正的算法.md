@@ -1,0 +1,240 @@
+---
+title: 一种用Java截取图片并矫正的算法
+date: 2019-05-26 17:08:17
+tags:
+- 算法
+- JAVA
+- 图像处理
+categories:
+- 技术
+---
+最近手头的项目遇到一个需求，要从一张图片中识别出身份证并且截取出来，生成一张与真实的身份证1:1大小的图片。开始我们找了几家第三方的解决方案，根据图片直接返回识别并还原的图片，但是效果并不理想，唯一一家识别效果好的平台，只返回图片中身份证4个角的像素坐标，所以裁剪和还原的任务就需要我们自己去解决。
+
+#### 任务
+
+已知图片中的4个像素坐标，将身份证截取出来，拉伸还原成正常比例，如下图：
+![任务](/img/20190526/1.png)
+
+#### 难题
+
+由于图片的拍摄角度各有不同，身份证的形状也是多种多样，算法需要适用从不同角度下拍摄的照片。
+
+![任务](/draw/AI学习路线.drawio.svg)
+
+#### 过程
+
+![过程](/img/20190526/2.png)
+
+已知ABCD4个点的坐标分别为： (a1, a2), (b1, b2), (c1, c2), (d1, d2)
+
+步骤一：新建一张画布，身份证的真实比例是 长度8.56cm×宽度5.4cm，所以我们新建一张856*540像素的画布：
+
+```
+BufferedImage nImg = new BufferedImage(856, 540, type);
+```
+
+步骤二：得到一张空白画布后，我们试着用二分法先填充画布中线的像素，如下图，将EF线排列到GH线上
+
+![二分法递归](/img/20190526/3.png)
+
+已知ABCD四个点的坐标，我们可以得出AC线与BD线的方程式，可以得到E和F的坐标(e1,e2)，(f1,f2)：
+
+```
+//计算左线中点
+double y1 = middleY * (ldy - luy) / img2.getHeight() + luy;
+double x1 = (y1 - luy) * (ldx - lux) / (ldy - luy) + lux;
+//计算右线中点
+double y2 = middleY * (rdy - ruy) / img2.getHeight() + ruy;
+double x2 = (y2 - ruy) * (rdx - rux) / (rdy - ruy) + rux;
+
+```
+从左到右遍历G到H的像素，根据比例获取EF线上的像素点，填充到GH线的像素上，由于GH的长度与EF的长度不同，所以不能一个像素对应一个像素依次排列，需要根据比例来获取像素，虽然会产生一个旧的像素填充到多个新的像素上导致的微量模糊，但这也是拉伸的过程中不可避免的。
+
+填充完GH线之后，使用递归的思想，将ABEF填充到新图，以此类推，最终每一行的像素得以填充，算法结束。
+
+我将整个过程封装成了一个JAVA类，有需要的可以直接拷贝使用。
+
+```
+package com.example.demo;
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+
+
+/**
+* @Author qiumaolong
+* @Date 2019/5/22 14:38
+**/
+public class ImageCorrection {
+    /**
+     * 原文件
+     */
+    private String originalFile;
+    BufferedImage image;
+
+    /**
+     * 左上角坐标
+     */
+    private double lux ;
+    private double luy;
+
+    /**
+     * 右上角坐标
+     */
+    private double rux;
+    private double ruy;
+
+    /**
+     * 左下角坐标
+     */
+    private double ldx;
+    private double ldy;
+
+    /**
+     * 右下角坐标
+     */
+    private double rdx;
+    private double rdy;
+
+    /**
+     * 目标图片规格
+     */
+    private int width;
+    private int height;
+
+    public ImageCorrection(String originalFile) {
+        this.originalFile = originalFile;
+        try {
+            image = ImageIO.read(new File(originalFile));
+            lux = 0;
+            luy = 0;
+
+            rux = image.getWidth();
+            ruy = 0;
+
+            ldx = 0;
+            ldy = image.getHeight();
+
+            rdx = image.getWidth();
+            rdy = image.getHeight();
+
+            width = image.getWidth();
+            height = image.getHeight();
+        }catch (IOException ioe){
+            throw new RuntimeException("读取图片失败");
+        }
+    }
+
+    public void setRange(double lux, double luy, double rux, double ruy, double ldx, double ldy, double rdx, double rdy){
+        this.lux = lux;
+        this.luy = luy;
+        this.rux = rux;
+        this.ruy = ruy;
+        this.ldx = ldx;
+        this.ldy = ldy;
+        this.rdx = rdx;
+        this.rdy = rdy;
+    }
+
+    public void setTargetImgSize(int width, int height){
+        this.width = width;
+        this.height = height;
+    }
+
+    public void action(String fileSavePath){
+        try {
+            File file = new File(fileSavePath);
+            action(new FileOutputStream(file));
+        }catch (Exception fe){
+            throw new RuntimeException("图片保存失败");
+        }
+    }
+
+    private void action(OutputStream os){
+        BufferedImage nImg = new BufferedImage(width, height, image.getType());
+        fillingPixel(image, nImg, 0, height);
+        try {
+            ImageIO.write(nImg, "jpg", os);
+        }catch (IOException e){
+            throw new RuntimeException("图片保存失败");
+        }
+    }
+
+    private void splice(OutputStream os) {
+        //截取图像
+        BufferedImage image1 = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
+        Graphics2D g2 = image1.createGraphics();
+        image1 = g2.getDeviceConfiguration().createCompatibleImage(image.getWidth(), image.getHeight(), Transparency.TRANSLUCENT);
+        g2.dispose();
+
+        for (int i = 0; i < image1.getWidth(); i++) {
+            for (int j = 0; j < image1.getHeight(); j++) {
+                if (!ifWithinRange(i, j)){
+                    continue;
+                }
+                image1.setRGB(i, j, image.getRGB(i, j));
+            }
+        }
+        try {
+            ImageIO.write(image1, "jpg", os);
+        }catch (IOException e){
+            throw new RuntimeException("图片保存失败");
+        }
+    }
+
+    /**
+     * 将不规则img1像素填充到规则的img2中
+     * 用二分线不断递归填充实现最终结果
+     * @param img1
+     * @param img2
+     * @param minY
+     * @param maxY
+     */
+    private void fillingPixel(BufferedImage img1, BufferedImage img2, int minY, int maxY){
+        if (minY == maxY || minY == maxY - 1){
+            return;
+        }
+        int middleY = (minY + maxY) / 2;
+        //计算左线中点
+        double y1 = middleY * (ldy - luy) / img2.getHeight() + luy;
+        double x1 = (y1 - luy) * (ldx - lux) / (ldy - luy) + lux;
+        //计算右线中点
+        double y2 = middleY * (rdy - ruy) / img2.getHeight() + ruy;
+        double x2 = (y2 - ruy) * (rdx - rux) / (rdy - ruy) + rux;
+
+        for (int i=0; i< img2.getWidth(); i++){
+            int x = new Double(i * (x2 - x1) / img2.getWidth() + x1).intValue();
+            int y = new Double((x - x1) * (y2 - y1) / (x2 - x1) + y1).intValue();
+            img2.setRGB(i, middleY, img1.getRGB(x, y));
+        }
+
+        fillingPixel(img1, img2, minY, middleY);
+        fillingPixel(img1, img2, middleY, maxY);
+    }
+
+    private boolean ifWithinRange(int x, int y){
+        double n = 0.0;
+        //是否在左线右边
+        n = (y - ldy)*(lux -ldx)/(luy - ldy) + ldx;
+        if (x < n){
+            return false;
+        }
+        //是否在右线左边
+        n = (y - ruy) * (rdx - rux) / (rdy - ruy) + rux;
+        if (x > n){
+            return false;
+        }
+        //是否在上线下边
+        n = luy + (ruy - luy)/(rux - lux)*(x - lux);
+        if (y < n){
+            return false;
+        }
+        //是否在下线上边
+        if (y > ldy + ((rdy - ldy) / (rdx - ldx) * (x - ldx))){
+            return false;
+        }
+        return true;
+    }
+}
+```
