@@ -38,13 +38,13 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_avatar = "img/avatar.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true 
-  featured_condition_size = 1 
+  featured_condition_size = 0
 
   # Baidu Analytics
   ba_track_id = ""
   
   # We need a proxy to access Disqus api in China
-  # Follow https://github.com/QiuMaolong/disqus-php-api to set up your own disqus proxy
+  # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
   disqus_proxy = ""
   disqus_site = ""
 
@@ -132,3 +132,15 @@ params = ["categories", "tags"]
     startLevel = 1
   [markup.highlight]
     style = "dracula"
+
+[params.giscus]
+data_repo="qmaolong/qmaolong.github.io"
+data_repo_id="MDEwOlJlcG9zaXRvcnk4NDE5OTc0Nw=="
+data_category="Comments"
+data_category_id="DIC_kwDOBQTJQ84CRawx"
+data_mapping="url"
+data_reactions_enabled="1"
+data_emit_metadata="0"
+data_theme="preferred_color_scheme"
+data_lang="zh-CN"
+crossorigin="anonymous"
