@@ -41,7 +41,7 @@ home = ["HTML", "RSS", "Algolia"]
   featured_condition_size = 0
 
   # Baidu Analytics
-  ba_track_id = ""
+  ba_track_id = "799616ec29c13c7ede20ee73d9dc334d"
   
   # We need a proxy to access Disqus api in China
   # Follow https://github.com/zhaohuabing/disqus-php-api to set up your own disqus proxy
