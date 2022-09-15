@@ -1,4 +1,4 @@
-baseURL = 'https://qmaolong.cn/'
+baseURL = ''
 languageCode = 'cn-zh'
 title = 'Maolong’s Blog'
 disqusShortname = ""
