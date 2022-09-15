@@ -31,7 +31,7 @@
                     {{ if not .Site.Params.omit_categories }}
                         {{ range $name, $taxonomy := .Site.Taxonomies.categories }}
                         <li>
-                            <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+                            <a href="{{ "/categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
                         </li>
                         {{ end }}
                     {{ end }}
