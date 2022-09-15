@@ -13,8 +13,8 @@ home = ["HTML", "RSS", "Algolia"]
 [params]
   header_image = "img/home-bg-jeep.jpg"
   SEOTitle = "邱茂龙的博客 | QiuMaolong Blog"
-  description = "邱茂龙，程序员, 开源爱好者，生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"
-  keyword = "邱茂龙, QiuMaolong, QiuMaolong, , 邱茂龙的网络日志, 邱茂龙的博客, QiuMaolong Blog, 博客, 个人网站, 互联网, Web, 云原生, 微服务, Microservice"
+  description = "邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"
+  keyword = "邱茂龙, QiuMaolong, 邱茂龙的网络日志, 邱茂龙的博客, QiuMaolong Blog, 博客, 个人网站, 互联网, Web"
   slogan = "记录本身，即已是反抗"
 
   image_404 = "img/404-bg.jpg"
@@ -28,9 +28,9 @@ home = ["HTML", "RSS", "Algolia"]
 
   # algolia site search
   algolia_search = true
-  algolia_appId = ""
-  algolia_indexName = ""
-  algolia_apiKey = ""
+  algolia_appId = "BHD6JX3DNT"
+  algolia_indexName = "qmaolong.cn"
+  algolia_apiKey = "73d44056f2075833713abbe49d322703"
 
   # Sidebar settings
   sidebar_about_description = "Software Developer, Open Source Enthusiast and Life Adventurer"
