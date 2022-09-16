@@ -1,7 +1,7 @@
 #stage 打包
 FROM klakegg/hugo AS build
 COPY . .
-RUN hugo --minify -t cleanwhite
+RUN hugo --minify
 
 #stage 运行
 FROM nginx:latest AS runtime
