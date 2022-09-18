@@ -1,0 +1,103 @@
+<!doctype html><html lang=cn-zh><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Maolong’s Blog"><meta property="og:type" content="article"><meta property="og:image" content="https://www.qmaolong.cn//img/home-bg-jeep.jpg"><meta property="twitter:image" content="https://www.qmaolong.cn//img/home-bg-jeep.jpg"><meta name=title content="算法日常——最后一块石头的重量II"><meta property="og:title" content="算法日常——最后一块石头的重量II"><meta property="twitter:title" content="算法日常——最后一块石头的重量II"><meta name=description content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="og:description" content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="twitter:description" content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="twitter:card" content="summary"><meta name=keyword content="邱茂龙, QiuMaolong, 邱茂龙的网络日志, 邱茂龙的博客, QiuMaolong Blog, 博客, 个人网站, 互联网, Web"><link rel="shortcut icon" href=/img/favicon.ico><title>算法日常——最后一块石头的重量II | 邱茂龙的博客 | QiuMaolong Blog</title><link rel=canonical href=/post/2021-06-08-%E6%9C%80%E5%90%8E%E4%B8%80%E5%9D%97%E7%9F%B3%E5%A4%B4%E7%9A%84%E9%87%8D%E9%87%8Fii/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script>
+<script src=/js/lazysizes.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Maolong’s Blog</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>首页</a></li><li><a href=/categories/%E6%8A%80%E6%9C%AF>技术</a></li><li><a href=/categories/%E8%AF%BB%E8%AE%B0>读记</a></li><li><a href=/categories/%E9%9A%8F%E6%84%9F>随感</a></li><li><a href=/archive/>归档</a></li><li><a href=/about/>关于</a></li><li><a href=/search><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/img/home-bg-jeep.jpg)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/%E7%AE%97%E6%B3%95 title=算法>算法</a>
+<a class=tag href=/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92 title=动态规划>动态规划</a></div><h1>算法日常——最后一块石头的重量II</h1><h2 class=subheading></h2><span class=meta>Posted by
+邱茂龙
+on
+Tuesday, June 8, 2021</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h3 id=问题>问题</h3><p>有一堆石头，用整数数组 stones 表示。其中 stones[i] 表示第 i 块石头的重量。</p><p>每一回合，从中选出<em>任意两块石头</em>，然后将它们一起粉碎。假设石头的重量分别为 x 和 y，且 x &lt;= y。那么粉碎的可能结果如下：</p><ul><li>如果 x == y，那么两块石头都会被完全粉碎；</li><li>如果 x != y，那么重量为 x 的石头将会完全粉碎，而重量为 y 的石头新重量为 y-x。</li></ul><p>最后，<em>最多只会剩下一块</em> 石头。返回此石头 最小的可能重量 。如果没有石头剩下，就返回 0。</p><h4 id=示例-1>示例 1</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>输入：stones = [2,7,4,1,8,1]
+</span></span><span style=display:flex><span>输出：1
+</span></span><span style=display:flex><span>解释：
+</span></span><span style=display:flex><span>组合 2 和 4，得到 2，所以数组转化为 [2,7,1,8,1]，
+</span></span><span style=display:flex><span>组合 7 和 8，得到 1，所以数组转化为 [2,1,1,1]，
+</span></span><span style=display:flex><span>组合 2 和 1，得到 1，所以数组转化为 [1,1,1]，
+</span></span><span style=display:flex><span>组合 1 和 1，得到 0，所以数组转化为 [1]，这就是最优值。
+</span></span></code></pre></div><h4 id=示例-2>示例 2</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>输入：stones = [31,26,33,21,40]
+</span></span><span style=display:flex><span>输出：5
+</span></span></code></pre></div><h4 id=提示>提示</h4><ul><li>1 &lt;= stones.length &lt;= 30</li><li>1 &lt;= stones[i] &lt;= 100</li></ul><hr><h3 id=题解>题解</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-golang data-lang=golang><span style=display:flex><span><span style=color:#ff79c6>package</span> main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4>/*
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> * @lc app=leetcode.cn id=1049 lang=golang
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> *
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> * [1049] 最后一块石头的重量 II
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> */</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4>// @lc code=start
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span><span style=color:#8be9fd;font-style:italic>func</span> <span style=color:#50fa7b>lastStoneWeightII</span>(stones []<span style=color:#8be9fd>int</span>) <span style=color:#8be9fd>int</span> {
+</span></span><span style=display:flex><span>	sum <span style=color:#ff79c6>:=</span> <span style=color:#bd93f9>0</span>
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>for</span> _, v <span style=color:#ff79c6>:=</span> <span style=color:#ff79c6>range</span> stones {
+</span></span><span style=display:flex><span>		sum <span style=color:#ff79c6>+=</span> v
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	harf <span style=color:#ff79c6>:=</span> sum <span style=color:#ff79c6>/</span> <span style=color:#bd93f9>2</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	dp <span style=color:#ff79c6>:=</span> <span style=color:#8be9fd;font-style:italic>make</span>([][]<span style=color:#8be9fd>int</span>, <span style=color:#8be9fd;font-style:italic>len</span>(stones))
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>for</span> i <span style=color:#ff79c6>:=</span> <span style=color:#ff79c6>range</span> dp {
+</span></span><span style=display:flex><span>		dp[i] = <span style=color:#8be9fd;font-style:italic>make</span>([]<span style=color:#8be9fd>int</span>, harf<span style=color:#ff79c6>+</span><span style=color:#bd93f9>1</span>)
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	max <span style=color:#ff79c6>:=</span> <span style=color:#bd93f9>0</span>
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>for</span> i <span style=color:#ff79c6>:=</span> <span style=color:#ff79c6>range</span> dp {
+</span></span><span style=display:flex><span>		stone <span style=color:#ff79c6>:=</span> stones[i]
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>for</span> j <span style=color:#ff79c6>:=</span> <span style=color:#ff79c6>range</span> dp[i] {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>if</span> i <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>0</span> {
+</span></span><span style=display:flex><span>				<span style=color:#ff79c6>if</span> j <span style=color:#ff79c6>==</span> stone {
+</span></span><span style=display:flex><span>					dp[i][j] = <span style=color:#bd93f9>1</span>
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			} <span style=color:#ff79c6>else</span> {
+</span></span><span style=display:flex><span>				<span style=color:#ff79c6>if</span> dp[i<span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>][j] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>1</span> <span style=color:#ff79c6>||</span> stone <span style=color:#ff79c6>==</span> j {
+</span></span><span style=display:flex><span>					dp[i][j] = <span style=color:#bd93f9>1</span>
+</span></span><span style=display:flex><span>					max = j
+</span></span><span style=display:flex><span>					<span style=color:#ff79c6>continue</span>
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				t <span style=color:#ff79c6>:=</span> j <span style=color:#ff79c6>-</span> stone
+</span></span><span style=display:flex><span>				<span style=color:#ff79c6>if</span> t &lt; <span style=color:#bd93f9>0</span> {
+</span></span><span style=display:flex><span>					<span style=color:#ff79c6>continue</span>
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>				<span style=color:#ff79c6>if</span> dp[i<span style=color:#ff79c6>-</span><span style=color:#bd93f9>1</span>][t] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>1</span> {
+</span></span><span style=display:flex><span>					dp[i][j] = <span style=color:#bd93f9>1</span>
+</span></span><span style=display:flex><span>				}
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>if</span> dp[i][j] <span style=color:#ff79c6>==</span> <span style=color:#bd93f9>1</span> {
+</span></span><span style=display:flex><span>				max = j
+</span></span><span style=display:flex><span>			}
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>return</span> sum <span style=color:#ff79c6>-</span> (max <span style=color:#ff79c6>*</span> <span style=color:#bd93f9>2</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4>// @lc code=end
+</span></span></span></code></pre></div><hr><h3 id=成绩>成绩</h3><ul><li>Your runtime beats 100 % of golang submissions</li><li>Your memory usage beats 26.83 % of golang submissions (3.2 MB)</li></ul><div class="entry-shang text-center"><p>「真诚赞赏，手留余香」</p><button class="zs show-zs btn btn-bred">赞赏支持</button></div><div class=zs-modal-bg></div><div class=zs-modal-box><div class=zs-modal-head><button type=button class=close>×</button>
+<span class=author><a href=https://www.qmaolong.cn/><img src=/img/avatar.jpg>Maolong’s Blog</a></span><p class=tip><i></i><span>真诚赞赏，手留余香</span></p></div><div class=zs-modal-body><div class=zs-modal-btns><button class="btn btn-blink" data-num=2>2元</button>
+<button class="btn btn-blink" data-num=5>5元</button>
+<button class="btn btn-blink" data-num=10>10元</button>
+<button class="btn btn-blink" data-num=50>50元</button>
+<button class="btn btn-blink" data-num=100>100元</button>
+<button class="btn btn-blink" data-num=1>任意金额</button></div><div class=zs-modal-pay><button class="btn btn-bred" id=pay-text>2元</button><p>使用<span id=pay-type>微信</span>扫描二维码完成支付</p><img src=/img/reward/wechat-2.png id=pay-image></div></div><div class=zs-modal-footer><label><input type=radio name=zs-type value=wechat class=zs-type checked><span><span class=zs-wechat><img src=/img/reward/wechat-btn.png></span></label>
+<label><input type=radio name=zs-type value=alipay class=zs-type class=zs-alipay><img src=/img/reward/alipay-btn.png></span></label></div></div><script type=text/javascript src=/js/reward.js></script><hr><ul class=pager><li class=previous><a href=/post/2020-11-20-%E8%AF%AD%E5%BD%95/ data-toggle=tooltip data-placement=top title=随感>&larr;
+Previous Post</a></li><li class=next><a href=/post/2021-06-26-%E6%BB%91%E5%8A%A8%E8%B0%9C%E9%A2%98/ data-toggle=tooltip data-placement=top title=算法日常——滑动谜题>Next
+Post &rarr;</a></li></ul><script src=https://giscus.app/client.js data-repo=qmaolong/qmaolong.github.io data-repo-id="MDEwOlJlcG9zaXRvcnk4NDE5OTc0Nw==" data-category=Comments data-category-id=DIC_kwDOBQTJQ84CRawx data-mapping=url data-reactions-enabled=1 data-emit-metadata=0 data-theme=preferred_color_scheme data-lang=zh-CN crossorigin=anonymous async></script></div><div class="col-lg-2 col-lg-offset-0
+visible-lg-block
+sidebar-container
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/java title=java>java</a>
+<a href=/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92 title=动态规划>动态规划</a>
+<a href=/tags/%E5%8C%BA%E5%9D%97%E9%93%BE title=区块链>区块链</a>
+<a href=/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86 title=图像处理>图像处理</a>
+<a href=/tags/%E6%88%90%E9%95%BF title=成长>成长</a>
+<a href=/tags/%E7%AE%97%E6%B3%95 title=算法>算法</a>
+<a href=/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0 title=读书笔记>读书笔记</a>
+<a href=/tags/%E9%9A%8F%E6%84%9F title=随感>随感</a></div></section><section><hr><h5>FRIENDS</h5><ul class=list-inline><li><a target=_blank href=https://www.zhaohuabing.com/>赵化冰的博客</a></li><li><a target=_blank href=https://zhaozhihan.com>Linda的博客</a></li></ul></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:qmaolong@qq.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=/img/wechat.jpg><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-weixin fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/qmaolong><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href rel=alternate type=application/rss+xml title="Maolong’s Blog"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Maolong’s Blog 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(i,t){var n=document,s="script",e=n.createElement(s),o=n.getElementsByTagName(s)[0];e.src=i,t&&e.addEventListener("load",function(e){t(null,e)},!1),o.parentNode.insertBefore(e,o)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script><script>var _baId="799616ec29c13c7ede20ee73d9dc334d",_hmt=_hmt||[];(function(){var e=document.createElement("script"),t;e.src="//hm.baidu.com/hm.js?"+_baId,t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-GYFHYMX30F","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var r=$(_containerSelector),s,o,i,a,t,n=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(''),n.each(function(){s=$(this).prop("tagName").toLowerCase(),a="#"+$(this).prop("id"),o=$(this).text(),t=$('<a href="'+a+'" rel="nofollow">'+o+"</a>"),i=$('<li class="'+s+'_nav"></li>').append(t),$(e).append(i)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
