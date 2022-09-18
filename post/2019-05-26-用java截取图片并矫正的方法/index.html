@@ -14,7 +14,7 @@ on
 Sunday, May 26, 2019</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
 col-md-10 col-md-offset-1
 post-container"><blockquote><p>背景：最近手头的项目遇到一个需求，要从一张图片中识别出身份证并且截取出来，生成一张与真实的身份证1:1大小的图片。开始我们找了几家第三方的解决方案，根据图片直接返回识别并还原的图片，但是效果并不理想，唯一一家识别效果好的平台，只返回图片中身份证4个角的像素坐标，所以裁剪和还原的任务就需要我们自己去解决。</p></blockquote><h4 id=任务>任务</h4><p>已知图片中的4个像素坐标，将身份证截取出来，拉伸还原成正常比例，如下图：
-<img src=/img/20190526/1.png alt=任务></p><h4 id=难题>难题</h4><p>由于图片的拍摄角度各有不同，身份证的形状也是多种多样，算法需要适用从不同角度下拍摄的照片。</p><p><img src=/draw/AI%e5%ad%a6%e4%b9%a0%e8%b7%af%e7%ba%bf.drawio.svg alt=任务></p><h4 id=过程>过程</h4><p><img src=/img/20190526/2.png alt=过程></p><p>已知ABCD4个点的坐标分别为： (a1, a2), (b1, b2), (c1, c2), (d1, d2)</p><p>步骤一：新建一张画布，身份证的真实比例是 长度8.56cm×宽度5.4cm，所以我们新建一张856*540像素的画布：</p><pre tabindex=0><code>BufferedImage nImg = new BufferedImage(856, 540, type);
+<img src=/img/20190526/1.png alt=任务></p><h4 id=难题>难题</h4><p>由于图片的拍摄角度各有不同，身份证的形状也是多种多样，算法需要适用从不同角度下拍摄的照片。</p><h4 id=过程>过程</h4><p><img src=/img/20190526/2.png alt=过程></p><p>已知ABCD4个点的坐标分别为： (a1, a2), (b1, b2), (c1, c2), (d1, d2)</p><p>步骤一：新建一张画布，身份证的真实比例是 长度8.56cm×宽度5.4cm，所以我们新建一张856*540像素的画布：</p><pre tabindex=0><code>BufferedImage nImg = new BufferedImage(856, 540, type);
 </code></pre><p>步骤二：得到一张空白画布后，我们试着用二分法先填充画布中线的像素，如下图，将EF线排列到GH线上</p><p><img src=/img/20190526/3.png alt=二分法递归></p><p>已知ABCD四个点的坐标，我们可以得出AC线与BD线的方程式，可以得到E和F的坐标(e1,e2)，(f1,f2)：</p><pre tabindex=0><code>//计算左线中点
 double y1 = middleY * (ldy - luy) / img2.getHeight() + luy;
 double x1 = (y1 - luy) * (ldx - lux) / (ldy - luy) + lux;
