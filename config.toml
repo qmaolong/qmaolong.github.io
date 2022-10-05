@@ -12,7 +12,7 @@ theme = "cleanwhite"
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/material/little-boom-7362108_1280.jpg"
+  header_image = "img/material/tokyo-5772125_1280.jpg"
   SEOTitle = "邱茂龙的博客 | QiuMaolong Blog"
   description = "邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"
   keyword = "邱茂龙, QiuMaolong, 邱茂龙的网络日志, 邱茂龙的博客, QiuMaolong Blog, 博客, 个人网站, 互联网, Web"
