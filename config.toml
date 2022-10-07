@@ -133,6 +133,10 @@ params = ["categories", "tags"]
     startLevel = 1
   [markup.highlight]
     style = "dracula"
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params.giscus]
 data_repo="qmaolong/qmaolong.github.io"
