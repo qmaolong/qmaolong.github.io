@@ -1,0 +1,103 @@
+<!doctype html><html lang=cn-zh><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><meta property="og:site_name" content="Maolong’s Blog"><meta property="og:type" content="article"><meta property="og:image" content="https://www.qmaolong.cn//img/material/book.jpg"><meta property="twitter:image" content="https://www.qmaolong.cn//img/material/book.jpg"><meta name=title content="算法日常——验证二叉搜索树"><meta property="og:title" content="算法日常——验证二叉搜索树"><meta property="twitter:title" content="算法日常——验证二叉搜索树"><meta name=description content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="og:description" content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="twitter:description" content="邱茂龙,程序员, 开源爱好者,生活探险家 | 这里是 邱茂龙 的博客，与你一起发现更大的世界。"><meta property="twitter:card" content="summary"><meta name=keyword content="邱茂龙, QiuMaolong, 邱茂龙的网络日志, 邱茂龙的博客, QiuMaolong Blog, 博客, 个人网站, 互联网, Web"><link rel="shortcut icon" href=/img/favicon.ico><title>算法日常——验证二叉搜索树 | 邱茂龙的博客 | QiuMaolong Blog</title><link rel=canonical href=/post/2021-07-27-%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/hugo-theme-cleanwhite.min.css><link rel=stylesheet href=/css/zanshang.css><link href=https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.15.1/css/all.css rel=stylesheet type=text/css><script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/hux-blog.min.js></script>
+<script src=/js/lazysizes.min.js></script></head><nav class="navbar navbar-default navbar-custom navbar-fixed-top"><div class=container-fluid><div class="navbar-header page-scroll"><button type=button class=navbar-toggle>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span></button>
+<a class=navbar-brand href=/>Maolong’s Blog</a></div><div id=huxblog_navbar><div class=navbar-collapse><ul class="nav navbar-nav navbar-right"><li><a href=/>首页</a></li><li><a href=/categories/%E6%8A%80%E6%9C%AF>技术</a></li><li><a href=/categories/%E8%AF%BB%E8%AE%B0>读记</a></li><li><a href=/categories/%E9%9A%8F%E6%84%9F>随感</a></li><li><a href=/archive/>归档</a></li><li><a href=/about/>关于</a></li><li><a href=/search><i class="fa fa-search"></i></a></li></ul></div></div></div></nav><script>var $body=document.body,$toggle=document.querySelector(".navbar-toggle"),$navbar=document.querySelector("#huxblog_navbar"),$collapse=document.querySelector(".navbar-collapse");$toggle.addEventListener("click",handleMagic);function handleMagic(){$navbar.className.indexOf("in")>0?($navbar.className=" ",setTimeout(function(){$navbar.className.indexOf("in")<0&&($collapse.style.height="0px")},400)):($collapse.style.height="auto",$navbar.className+=" in")}</script><style type=text/css>header.intro-header{background-image:url(/img/material/question-mark-g6e5acf73d_1920.jpg)}</style><header class=intro-header><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><div class=tags><a class=tag href=/tags/%E7%AE%97%E6%B3%95 title=算法>算法</a>
+<a class=tag href=/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2 title=深度优先搜索>深度优先搜索</a></div><h1>算法日常——验证二叉搜索树</h1><h2 class=subheading></h2><span class=meta>Posted by
+Maolong
+on
+Tuesday, July 27, 2021</span></div></div></div></div></header><article><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+post-container"><h3 id=问题>问题：</h3><p>给你一个二叉树的根节点 <code>root</code> ，判断其是否是一个有效的二叉搜索树。</p><p><strong>有效</strong> 二叉搜索树定义如下：</p><ul><li>节点的左子树只包含<strong> 小于 </strong>当前节点的数。</li><li>节点的右子树只包含 <strong>大于</strong> 当前节点的数。</li><li>所有左子树和右子树自身必须也是二叉搜索树。</li></ul><p>&nbsp;</p><p><strong>示例 1：</strong></p><img alt src=https://assets.leetcode.com/uploads/2020/12/01/tree1.jpg style=width:302px;height:182px><pre>
+<strong>输入：</strong>root = [2,1,3]
+<strong>输出：</strong>true
+</pre><p><strong>示例 2：</strong></p><img alt src=https://assets.leetcode.com/uploads/2020/12/01/tree2.jpg style=width:422px;height:292px><pre>
+<strong>输入：</strong>root = [5,1,4,null,null,3,6]
+<strong>输出：</strong>false
+<strong>解释：</strong>根节点的值是 5 ，但是右子节点的值是 4 。
+</pre><p>&nbsp;</p><p><strong>提示：</strong></p><ul><li>树中节点数目范围在<code>[1, 10<sup>4</sup>]</code> 内</li><li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li></ul><div><div>Related Topics</div><div><li>树</li><li>深度优先搜索</li><li>二叉搜索树</li><li>二叉树</li></div></div><br><div><li>👍 1770</li><li>👎 0</li></div><h3 id=题解>题解：</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-golang data-lang=golang><span style=display:flex><span><span style=color:#6272a4>// @lc code=start
+</span></span></span><span style=display:flex><span><span style=color:#6272a4></span><span style=color:#6272a4>/**
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> * Definition for a binary tree node.
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> * type TreeNode struct {
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> *     Val int
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> *     Left *TreeNode
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> *     Right *TreeNode
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> * }
+</span></span></span><span style=display:flex><span><span style=color:#6272a4> */</span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>func</span> <span style=color:#50fa7b>isValidBST</span>(root <span style=color:#ff79c6>*</span>TreeNode) <span style=color:#8be9fd>bool</span> {
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>return</span> <span style=color:#50fa7b>isValid</span>(root, <span style=color:#ff79c6>nil</span>, <span style=color:#ff79c6>nil</span>)
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>func</span> <span style=color:#50fa7b>isValid</span>(root <span style=color:#ff79c6>*</span>TreeNode, min <span style=color:#ff79c6>*</span><span style=color:#8be9fd>int</span>, max <span style=color:#ff79c6>*</span><span style=color:#8be9fd>int</span>) <span style=color:#8be9fd>bool</span> {
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>if</span> root.Left <span style=color:#ff79c6>==</span> <span style=color:#ff79c6>nil</span> <span style=color:#ff79c6>&amp;&amp;</span> root.Right <span style=color:#ff79c6>==</span> <span style=color:#ff79c6>nil</span> {
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>true</span>
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>if</span> root.Left <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> {
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> root.Left.Val <span style=color:#ff79c6>&gt;=</span> root.Val {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> min <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> <span style=color:#ff79c6>&amp;&amp;</span> root.Left.Val <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>*</span>min {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> max <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> <span style=color:#ff79c6>&amp;&amp;</span> root.Left.Val <span style=color:#ff79c6>&gt;=</span> <span style=color:#ff79c6>*</span>max {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> !<span style=color:#50fa7b>isValid</span>(root.Left, min, <span style=color:#ff79c6>&amp;</span>root.Val) {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>if</span> root.Right <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> {
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> root.Right.Val <span style=color:#ff79c6>&lt;=</span> root.Val {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> min <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> <span style=color:#ff79c6>&amp;&amp;</span> root.Right.Val <span style=color:#ff79c6>&lt;=</span> <span style=color:#ff79c6>*</span>min {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> max <span style=color:#ff79c6>!=</span> <span style=color:#ff79c6>nil</span> <span style=color:#ff79c6>&amp;&amp;</span> root.Right.Val <span style=color:#ff79c6>&gt;=</span> <span style=color:#ff79c6>*</span>max {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>		<span style=color:#ff79c6>if</span> !<span style=color:#50fa7b>isValid</span>(root.Right, <span style=color:#ff79c6>&amp;</span>root.Val, max) {
+</span></span><span style=display:flex><span>			<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>false</span>
+</span></span><span style=display:flex><span>		}
+</span></span><span style=display:flex><span>	}
+</span></span><span style=display:flex><span>	<span style=color:#ff79c6>return</span> <span style=color:#ff79c6>true</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4>// @lc code=end
+</span></span></span></code></pre></div><h3 id=成绩>成绩：</h3><ul><li>Your runtime beats 95.6 % of golang submissions</li><li>Your memory usage beats 98.41 % of golang submissions (5.1 MB)</li></ul><div class="entry-shang text-center"><p>「真诚赞赏，手留余香」</p><button class="zs show-zs btn btn-bred">赞赏支持</button></div><div class=zs-modal-bg></div><div class=zs-modal-box><div class=zs-modal-head><button type=button class=close>×</button>
+<span class=author><a href=https://www.qmaolong.cn/><img src=/img/avatar.jpg>Maolong’s Blog</a></span><p class=tip><i></i><span>真诚赞赏，手留余香</span></p></div><div class=zs-modal-body><div class=zs-modal-btns><button class="btn btn-blink" data-num=2>2元</button>
+<button class="btn btn-blink" data-num=5>5元</button>
+<button class="btn btn-blink" data-num=10>10元</button>
+<button class="btn btn-blink" data-num=50>50元</button>
+<button class="btn btn-blink" data-num=100>100元</button>
+<button class="btn btn-blink" data-num=1>任意金额</button></div><div class=zs-modal-pay><button class="btn btn-bred" id=pay-text>2元</button><p>使用<span id=pay-type>微信</span>扫描二维码完成支付</p><img src=/img/reward/wechat-2.png id=pay-image></div></div><div class=zs-modal-footer><label><input type=radio name=zs-type value=wechat class=zs-type checked><span><span class=zs-wechat><img src=/img/reward/wechat-btn.png></span></label>
+<label><input type=radio name=zs-type value=alipay class=zs-type class=zs-alipay><img src=/img/reward/alipay-btn.png></span></label></div></div><script type=text/javascript src=/js/reward.js></script><hr><ul class=pager><li class=previous><a href=/post/2021-07-22-%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8/ data-toggle=tooltip data-placement=top title=算法日常——复制带随机指针的链表>&larr;
+Previous Post</a></li><li class=next><a href=/post/2021-08-05-%E6%89%BE%E5%88%B0%E6%9C%80%E7%BB%88%E7%9A%84%E5%AE%89%E5%85%A8%E7%8A%B6%E6%80%81/ data-toggle=tooltip data-placement=top title=算法日常——找到最终的安全状态>Next
+Post &rarr;</a></li></ul><script src=https://giscus.app/client.js data-repo=qmaolong/qmaolong.github.io data-repo-id="MDEwOlJlcG9zaXRvcnk4NDE5OTc0Nw==" data-category=Comments data-category-id=DIC_kwDOBQTJQ84CRawx data-mapping=url data-reactions-enabled=1 data-emit-metadata=0 data-theme=preferred_color_scheme data-lang=zh-CN crossorigin=anonymous async></script></div><div class="col-lg-2 col-lg-offset-0
+visible-lg-block
+sidebar-container
+catalog-container"><div class=side-catalog><hr class="hidden-sm hidden-xs"><h5><a class=catalog-toggle href=#>CATALOG</a></h5><ul class=catalog-body></ul></div></div><div class="col-lg-8 col-lg-offset-2
+col-md-10 col-md-offset-1
+sidebar-container"><section><hr class="hidden-sm hidden-xs"><h5><a href=/tags/>FEATURED TAGS</a></h5><div class=tags><a href=/tags/java title=java>java</a>
+<a href=/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2 title=个人博客>个人博客</a>
+<a href=/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92 title=动态规划>动态规划</a>
+<a href=/tags/%E5%8C%BA%E5%9D%97%E9%93%BE title=区块链>区块链</a>
+<a href=/tags/%E5%93%88%E5%B8%8C title=哈希>哈希</a>
+<a href=/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86 title=图像处理>图像处理</a>
+<a href=/tags/%E6%88%90%E9%95%BF title=成长>成长</a>
+<a href=/tags/%E6%8A%80%E6%9C%AF title=技术>技术</a>
+<a href=/tags/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2 title=深度优先搜索>深度优先搜索</a>
+<a href=/tags/%E7%AE%97%E6%B3%95 title=算法>算法</a>
+<a href=/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0 title=读书笔记>读书笔记</a>
+<a href=/tags/%E9%93%BE%E8%A1%A8 title=链表>链表</a>
+<a href=/tags/%E9%9A%8F%E6%84%9F title=随感>随感</a></div></section><section><hr><h5>FRIENDS</h5><ul class=list-inline><li><a target=_blank href=https://www.zhaohuabing.com/>赵化冰的博客</a></li><li><a target=_blank href=https://zhaozhihan.com>Linda的博客</a></li></ul></section></div></div></div></article><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center"><li><a href=mailto:qmaolong@qq.com><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=/img/wechat.jpg><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-weixin fa-stack-1x fa-inverse"></i></span></a></li><li><a target=_blank href=https://github.com/qmaolong><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href rel=alternate type=application/rss+xml title="Maolong’s Blog"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="copyright text-muted">Copyright &copy; Maolong’s Blog 2022<br><a href=https://themes.gohugo.io/hugo-theme-cleanwhite>CleanWhite Hugo Theme</a> by <a href=https://zhaohuabing.com>Huabing</a> |
+<iframe style=margin-left:2px;margin-bottom:-5px frameborder=0 scrolling=0 width=100px height=20px src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true"></iframe></p></div></div></div></footer><script>function loadAsync(i,t){var n=document,s="script",e=n.createElement(s),o=n.getElementsByTagName(s)[0];e.src=i,t&&e.addEventListener("load",function(e){t(null,e)},!1),o.parentNode.insertBefore(e,o)}</script><script>$("#tag_cloud").length!==0&&loadAsync("/js/jquery.tagcloud.js",function(){$.fn.tagcloud.defaults={color:{start:"#bbbbee",end:"#0085a1"}},$("#tag_cloud a").tagcloud()})</script><script>loadAsync("https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js",function(){var e=document.querySelector("nav");e&&FastClick.attach(e)})</script><script>(function(){var e=document.createElement("script"),t,n=window.location.protocol.split(":")[0];n==="https"?e.src="https://zz.bdstatic.com/linksubmit/push.js":e.src="http://push.zhanzhang.baidu.com/push.js",t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script><script>var _baId="799616ec29c13c7ede20ee73d9dc334d",_hmt=_hmt||[];(function(){var e=document.createElement("script"),t;e.src="//hm.baidu.com/hm.js?"+_baId,t=document.getElementsByTagName("script")[0],t.parentNode.insertBefore(e,t)})()</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-GYFHYMX30F","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script>
+<script type=text/javascript>function generateCatalog(e){_containerSelector="div.post-container";var r=$(_containerSelector),s,o,i,a,t,n=r.find("h1,h2,h3,h4,h5,h6");return $(e).html(''),n.each(function(){s=$(this).prop("tagName").toLowerCase(),a="#"+$(this).prop("id"),o=$(this).text(),t=$('<a href="'+a+'" rel="nofollow">'+o+"</a>"),i=$('<li class="'+s+'_nav"></li>').append(t),$(e).append(i)}),!0}generateCatalog(".catalog-body"),$(".catalog-toggle").click(function(e){e.preventDefault(),$(".side-catalog").toggleClass("fold")}),loadAsync("/js/jquery.nav.js",function(){$(".catalog-body").onePageNav({currentClass:"active",changeHash:!1,easing:"swing",filter:"",scrollSpeed:700,scrollOffset:0,scrollThreshold:.2,begin:null,end:null,scrollChange:null,padding:80})})</script></body></html>
