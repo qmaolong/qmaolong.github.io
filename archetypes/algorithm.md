@@ -1,8 +1,6 @@
 ---
-title: "算法日常——{{ replace .Name "-" " " | title }}"
-date: {{ .Date }}
-subtitle: ""
-description: ""
+title: "算法日常——{{ substr .Name 11 | title }}"
+date: {{ .Date | time.Format "2006-01-02 15:04:05" }}
 author: Maolong
 image: "img/material/question-mark-g6e5acf73d_1920.jpg"
 tags: ["算法", ""]

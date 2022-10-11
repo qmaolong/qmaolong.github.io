@@ -1,10 +1,9 @@
 ---
-title: "An Example Post"
+title: "{{ substr .Name 11 | title }}"
 subtitle: ""
 description: ""
-date: 2018-06-04
+date: {{ .Date | time.Format "2006-01-02 15:04:05" }}
 author: Maolong
-image: ""
 tags: ["tag1", "tag2"]
 categories:  ["Tech" ]
 ---
